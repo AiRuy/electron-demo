@@ -24,10 +24,6 @@ install:
   - git reset --hard HEAD
   - yarn
   - node --version
-  
-environment:
-  access_token:
-    secure：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
 
 build_script:
   #- yarn test
