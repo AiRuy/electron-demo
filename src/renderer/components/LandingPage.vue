@@ -6,6 +6,9 @@
         <span class="title">
           Welcome to your new project!
         </span>
+        <div>
+        	<img v-bind:src="imageUrl">
+        </div>
         <system-information></system-information>
       </div>
 
@@ -35,6 +38,11 @@
   export default {
     name: 'landing-page',
     components: { SystemInformation },
+    data(){
+    	return {
+    		imageUrl:'static/imgs/excel-pdf-icon-3.png',	//加载静态static目录的图片路径
+    	}
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
